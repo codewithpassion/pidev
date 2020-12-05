@@ -26,8 +26,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
             python3 \
             python3-dev \
             python3-pip && \
-     pip3 install setuptools -U && \
+     pip3 install --upgrade --user pip==19.1.1 && \
+     pip3 install setuptools==43.0.0 -U --ignore-installed && \
      pip3 install \
+        PyYaml==5.2 \
         awscli==1.16.193 \
         colorama==0.3.7 \
         conan==1.16.1 \
@@ -37,7 +39,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         nose==1.3.7
 
 # Install debian packaging utility
-RUN gem install fpm
+RUN gem install childprocess -v 1.0.1
+RUN gem install ffi -v 1.11.3
+RUN gem install fpm -v 1.10.2
 
 # Setup user
 ENV USERNAME user
