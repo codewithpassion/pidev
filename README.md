@@ -11,6 +11,21 @@ Use
 
 The CI server will take care of deploying images to Dockerhub.
 
+# Use Bootstrap image
+run:
+```
+./run-bootstrap.sh
+```
+
+This will give you a ubuntu console with bash running. 
+The default for the /data directory (inside the container) is pointing to ${HOME}/devel.
+To use another workspace directory run:
+
+```
+./run-bootstrap.sh <DIRECTORY>
+```
+
+
 # General Use for Development
 1. Navigate to project directory
 2. Launch a development container with run.sh and any desired options
