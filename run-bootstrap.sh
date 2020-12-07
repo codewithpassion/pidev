@@ -9,8 +9,9 @@ fi
 
 if [ ! -d "$WORKSPACE" ] 
 then
-    echo Workspace directory does not exist: $WORKSPACE.
-    echo Consider ruinning: run-bootstrap.sh <PATH>
+    echo "Workspace directory does not exist: $WORKSPACE."
+    echo "Consider ruinning: run-bootstrap.sh <PATH>"
+    exit 1
 fi
 
 docker run --rm -it \
