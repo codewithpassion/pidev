@@ -3,7 +3,7 @@
 # Default settings
 DOCKER_COMMAND="docker"
 NETWORK_CONFIG="bridge"
-IMAGE_NAME="openrov/amd64-ubuntu-core:bionic"
+IMAGE_NAME="pidev/amd64-ubuntu-core:bionic"
 
 # Default args
 EXTRA_ARGS="--rm"
@@ -16,11 +16,11 @@ for i in "$@"
 do
 case $i in
     --arm)
-    IMAGE_NAME="openrov/raspberrypi3-debian-core:jessie"
+    IMAGE_NAME="pidev/raspberrypi3-debian-core:jessie"
     shift
     ;;
     --buster)
-    IMAGE_NAME="openrov/raspberrypi3-debian-core:buster"
+    IMAGE_NAME="pidev/raspberrypi3-debian-core:buster"
     shift
     ;;
     --clion=*)

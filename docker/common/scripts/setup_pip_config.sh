@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Create pip config file with OpenROV repository and Artifactory credentials set
+# Create pip config file with repository and Artifactory credentials set
 mkdir -p ~/.config/pip
 cat > ~/.config/pip/pip.conf <<_EOF
 [global]
