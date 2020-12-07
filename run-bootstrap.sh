@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DEFAULT_WS=${HOME}/devel
+DEFAULT_WS=${HOME}/workspace
 if [ -z "$1" ]
 then
     WORKSPACE=$DEFAULT_WS
